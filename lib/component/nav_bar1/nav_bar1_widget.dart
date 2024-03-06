@@ -41,6 +41,26 @@ class _NavBar1WidgetState extends State<NavBar1Widget>
         ),
       ],
     ),
+    'iconButtonOnPageLoadAnimation': AnimationInfo(
+      trigger: AnimationTrigger.onPageLoad,
+      applyInitialState: true,
+      effects: [
+        FadeEffect(
+          curve: Curves.easeInOut,
+          delay: 0.ms,
+          duration: 600.ms,
+          begin: 0.0,
+          end: 1.0,
+        ),
+        MoveEffect(
+          curve: Curves.easeInOut,
+          delay: 0.ms,
+          duration: 600.ms,
+          begin: const Offset(0.0, 30.0),
+          end: const Offset(0.0, 0.0),
+        ),
+      ],
+    ),
   };
 
   @override
@@ -146,7 +166,7 @@ class _NavBar1WidgetState extends State<NavBar1Widget>
                   ),
                   onPressed: () async {
                     context.pushNamed(
-                      'frmListDashboard',
+                      'frmcollectiondashboard',
                       extra: <String, dynamic>{
                         kTransitionInfoKey: const TransitionInfo(
                           hasTransition: true,
@@ -187,9 +207,12 @@ class _NavBar1WidgetState extends State<NavBar1Widget>
                       },
                     );
                   },
-                ).animateOnActionTrigger(
-                  animationsMap['iconButtonOnActionTriggerAnimation']!,
-                ),
+                )
+                    .animateOnPageLoad(
+                        animationsMap['iconButtonOnPageLoadAnimation']!)
+                    .animateOnActionTrigger(
+                      animationsMap['iconButtonOnActionTriggerAnimation']!,
+                    ),
                 Column(
                   mainAxisSize: MainAxisSize.min,
                   mainAxisAlignment: MainAxisAlignment.start,

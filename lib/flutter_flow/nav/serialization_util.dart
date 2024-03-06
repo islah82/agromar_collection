@@ -217,10 +217,16 @@ dynamic deserializeParam<T>(
             return JpnTblformRow(data);
           case TbluserRow:
             return TbluserRow(data);
+          case ViewDashboardTotallastmonthlyRow:
+            return ViewDashboardTotallastmonthlyRow(data);
+          case ViewDashboardMonthlytotalRow:
+            return ViewDashboardMonthlytotalRow(data);
           case UserRolesViewRow:
             return UserRolesViewRow(data);
           case JpnTblauthorRow:
             return JpnTblauthorRow(data);
+          case ViewDashboardSumbylotRow:
+            return ViewDashboardSumbylotRow(data);
           case JpnTblpegawaibertugasRow:
             return JpnTblpegawaibertugasRow(data);
           case AgTbltransactionRow:

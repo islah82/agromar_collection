@@ -2,11 +2,13 @@ import '/backend/supabase/supabase.dart';
 import '/component/com_add_lot/com_add_lot_widget.dart';
 import '/component/com_edit_lot_copy/com_edit_lot_copy_widget.dart';
 import '/component/nav_bar1/nav_bar1_widget.dart';
+import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
@@ -20,12 +22,54 @@ class FrmshoplistWidget extends StatefulWidget {
   State<FrmshoplistWidget> createState() => _FrmshoplistWidgetState();
 }
 
-class _FrmshoplistWidgetState extends State<FrmshoplistWidget> {
+class _FrmshoplistWidgetState extends State<FrmshoplistWidget>
+    with TickerProviderStateMixin {
   late FrmshoplistModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
   late StreamSubscription<bool> _keyboardVisibilitySubscription;
   bool _isKeyboardVisible = false;
+
+  final animationsMap = {
+    'containerOnPageLoadAnimation1': AnimationInfo(
+      trigger: AnimationTrigger.onPageLoad,
+      effects: [
+        FadeEffect(
+          curve: Curves.easeInOut,
+          delay: 0.ms,
+          duration: 600.ms,
+          begin: 0.0,
+          end: 1.0,
+        ),
+        MoveEffect(
+          curve: Curves.easeInOut,
+          delay: 0.ms,
+          duration: 600.ms,
+          begin: const Offset(0.0, 30.0),
+          end: const Offset(0.0, 0.0),
+        ),
+      ],
+    ),
+    'containerOnPageLoadAnimation2': AnimationInfo(
+      trigger: AnimationTrigger.onPageLoad,
+      effects: [
+        FadeEffect(
+          curve: Curves.easeInOut,
+          delay: 0.ms,
+          duration: 600.ms,
+          begin: 0.0,
+          end: 1.0,
+        ),
+        MoveEffect(
+          curve: Curves.easeInOut,
+          delay: 0.ms,
+          duration: 600.ms,
+          begin: const Offset(0.0, 30.0),
+          end: const Offset(0.0, 0.0),
+        ),
+      ],
+    ),
+  };
 
   @override
   void initState() {
@@ -365,7 +409,8 @@ class _FrmshoplistWidgetState extends State<FrmshoplistWidget> {
                                                     ],
                                                   ),
                                                 ),
-                                              ),
+                                              ).animateOnPageLoad(animationsMap[
+                                                  'containerOnPageLoadAnimation2']!),
                                             );
                                           },
                                         );
@@ -379,7 +424,8 @@ class _FrmshoplistWidgetState extends State<FrmshoplistWidget> {
                         ),
                       ],
                     ),
-                  ),
+                  ).animateOnPageLoad(
+                      animationsMap['containerOnPageLoadAnimation1']!),
                   if (!(isWeb
                       ? MediaQuery.viewInsetsOf(context).bottom > 0
                       : _isKeyboardVisible))

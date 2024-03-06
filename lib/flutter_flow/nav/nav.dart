@@ -42,7 +42,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                 ),
               ),
             )
-          : const FrmListDashboardWidget(),
+          : const FrmcollectiondashboardWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
@@ -57,7 +57,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                     ),
                   ),
                 )
-              : const FrmListDashboardWidget(),
+              : const FrmcollectiondashboardWidget(),
         ),
         FFRoute(
           name: 'frmListShop',
@@ -106,6 +106,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'frmfilteramount_bydate',
           path: '/frmfilteramountBydate',
           builder: (context, params) => const FrmfilteramountBydateWidget(),
+        ),
+        FFRoute(
+          name: 'frmcollectiondashboard',
+          path: '/frmcollectiondashboard',
+          builder: (context, params) => const FrmcollectiondashboardWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

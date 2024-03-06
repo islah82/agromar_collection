@@ -13,3 +13,5 @@ export '/pages/frm_list_o_f_l_o_t_c_month2/frm_list_o_f_l_o_t_c_month2_widget.da
     show FrmListOFLOTCMonth2Widget;
 export '/pages/frmfilteramount_bydate/frmfilteramount_bydate_widget.dart'
     show FrmfilteramountBydateWidget;
+export '/pages/frmcollectiondashboard/frmcollectiondashboard_widget.dart'
+    show FrmcollectiondashboardWidget;
