@@ -550,7 +550,7 @@ class _FrmfilteramountBydateWidgetState
                                 'RM ${getJsonField(
                                   querydatalistItem,
                                   r'''$.tblamount''',
-                                ).toString()}.00',
+                                ).toString()}',
                                 textAlign: TextAlign.end,
                                 style: FlutterFlowTheme.of(context).bodyMedium,
                               ),
