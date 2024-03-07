@@ -97,9 +97,9 @@ class _FrmListOFLOTCmonthWidgetState extends State<FrmListOFLOTCmonthWidget> {
             key: scaffoldKey,
             backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
             floatingActionButton: Align(
-              alignment: const AlignmentDirectional(1.0, 1.0),
+              alignment: const AlignmentDirectional(-1.0, -1.0),
               child: Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 30.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(30.0, 30.0, 0.0, 0.0),
                 child: FloatingActionButton(
                   onPressed: () async {
                     context.safePop();
@@ -206,7 +206,7 @@ class _FrmListOFLOTCmonthWidgetState extends State<FrmListOFLOTCmonthWidget> {
                           alignment: const AlignmentDirectional(0.0, -1.0),
                           child: Padding(
                             padding: const EdgeInsetsDirectional.fromSTEB(
-                                11.0, 0.0, 11.0, 0.0),
+                                3.0, 0.0, 3.0, 0.0),
                             child: Builder(
                               builder: (context) {
                                 final queryDataTable =
@@ -336,7 +336,7 @@ class _FrmListOFLOTCmonthWidgetState extends State<FrmListOFLOTCmonthWidget> {
                                       Row(
                                         mainAxisSize: MainAxisSize.max,
                                         mainAxisAlignment:
-                                            MainAxisAlignment.start,
+                                            MainAxisAlignment.end,
                                         children: [
                                           Padding(
                                             padding:

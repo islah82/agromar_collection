@@ -92,6 +92,27 @@ class _FrmListOFLOTCMonth2WidgetState extends State<FrmListOFLOTCMonth2Widget> {
           child: Scaffold(
             key: scaffoldKey,
             backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
+            floatingActionButton: Align(
+              alignment: const AlignmentDirectional(-1.0, -1.0),
+              child: Padding(
+                padding: const EdgeInsetsDirectional.fromSTEB(30.0, 30.0, 0.0, 0.0),
+                child: FloatingActionButton(
+                  onPressed: () async {
+                    context.safePop();
+                    setState(() {
+                      FFAppState().datalistdhow = false;
+                    });
+                  },
+                  backgroundColor: FlutterFlowTheme.of(context).primary,
+                  elevation: 10.0,
+                  child: Icon(
+                    Icons.chevron_left_sharp,
+                    color: FlutterFlowTheme.of(context).primaryBackground,
+                    size: 24.0,
+                  ),
+                ),
+              ),
+            ),
             body: SafeArea(
               top: true,
               child: Align(
@@ -480,39 +501,7 @@ class _FrmListOFLOTCMonth2WidgetState extends State<FrmListOFLOTCMonth2Widget> {
                               size: 15.0,
                             ),
                             options: FFButtonOptions(
-                              height: 40.0,
-                              padding: const EdgeInsetsDirectional.fromSTEB(
-                                  24.0, 0.0, 24.0, 0.0),
-                              iconPadding: const EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 0.0, 0.0, 0.0),
-                              color: FlutterFlowTheme.of(context).primary,
-                              textStyle: FlutterFlowTheme.of(context)
-                                  .titleSmall
-                                  .override(
-                                    fontFamily: 'Space Grotesk',
-                                    color: Colors.white,
-                                  ),
-                              elevation: 3.0,
-                              borderSide: const BorderSide(
-                                color: Colors.transparent,
-                                width: 1.0,
-                              ),
-                              borderRadius: BorderRadius.circular(8.0),
-                            ),
-                          ),
-                          FFButtonWidget(
-                            onPressed: () async {
-                              context.safePop();
-                              setState(() {
-                                FFAppState().datalistdhow = false;
-                              });
-                            },
-                            text: 'BACK',
-                            icon: const Icon(
-                              Icons.chevron_left,
-                              size: 15.0,
-                            ),
-                            options: FFButtonOptions(
+                              width: 130.0,
                               height: 40.0,
                               padding: const EdgeInsetsDirectional.fromSTEB(
                                   24.0, 0.0, 24.0, 0.0),
@@ -543,6 +532,7 @@ class _FrmListOFLOTCMonth2WidgetState extends State<FrmListOFLOTCMonth2Widget> {
                               size: 15.0,
                             ),
                             options: FFButtonOptions(
+                              width: 130.0,
                               height: 40.0,
                               padding: const EdgeInsetsDirectional.fromSTEB(
                                   24.0, 0.0, 24.0, 0.0),

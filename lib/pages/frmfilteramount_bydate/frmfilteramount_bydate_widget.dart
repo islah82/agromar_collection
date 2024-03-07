@@ -65,7 +65,7 @@ class _FrmfilteramountBydateWidgetState
         floatingActionButton: Align(
           alignment: const AlignmentDirectional(-1.0, -1.0),
           child: Padding(
-            padding: const EdgeInsetsDirectional.fromSTEB(25.0, 25.0, 0.0, 0.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(30.0, 30.0, 0.0, 0.0),
             child: FloatingActionButton(
               onPressed: () async {
                 context.safePop();
@@ -95,7 +95,7 @@ class _FrmfilteramountBydateWidgetState
                       width: 100.0,
                       height: 100.0,
                       decoration: BoxDecoration(
-                        color: FlutterFlowTheme.of(context).secondaryBackground,
+                        color: FlutterFlowTheme.of(context).alternate,
                         image: DecorationImage(
                           fit: BoxFit.cover,
                           image: Image.asset(
