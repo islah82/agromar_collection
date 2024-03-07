@@ -438,7 +438,17 @@ class _FrmcollectiondashboardWidgetState
                                                                         8.0,
                                                                         0.0),
                                                             child: Text(
-                                                              'RM ${querySumbylotItem.sum?.toString()}.00',
+                                                              formatNumber(
+                                                                querySumbylotItem
+                                                                    .sum,
+                                                                formatType:
+                                                                    FormatType
+                                                                        .decimal,
+                                                                decimalType:
+                                                                    DecimalType
+                                                                        .periodDecimal,
+                                                                currency: 'RM',
+                                                              ),
                                                               style: FlutterFlowTheme
                                                                       .of(context)
                                                                   .bodyMedium
@@ -489,7 +499,7 @@ class _FrmcollectiondashboardWidgetState
                           ),
                           Container(
                             width: double.infinity,
-                            height: 385.0,
+                            height: 315.0,
                             decoration: BoxDecoration(
                               color: FlutterFlowTheme.of(context)
                                   .primaryBackground,

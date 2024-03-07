@@ -75,11 +75,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => const FrmRecordTransactionWidget(),
         ),
         FFRoute(
-          name: 'frmListDashboard',
-          path: '/frmListDashboard',
-          builder: (context, params) => const FrmListDashboardWidget(),
-        ),
-        FFRoute(
           name: 'frmListOFLOTCmonth',
           path: '/frmListOFLOTCmonth',
           builder: (context, params) => FrmListOFLOTCmonthWidget(

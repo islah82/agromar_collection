@@ -322,7 +322,13 @@ class _FrmListOFLOTCmonthWidgetState extends State<FrmListOFLOTCmonthWidget> {
                                         alignment:
                                             const AlignmentDirectional(1.0, 0.0),
                                         child: Text(
-                                          'RM ${queryDataTableItem.tblamount?.toString()}.00',
+                                          formatNumber(
+                                            queryDataTableItem.tblamount,
+                                            formatType: FormatType.decimal,
+                                            decimalType:
+                                                DecimalType.periodDecimal,
+                                            currency: 'RM',
+                                          ),
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium,
                                         ),
